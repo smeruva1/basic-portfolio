@@ -153,7 +153,7 @@ hr {
     } 
 
      .push {
-      height: 400px;
+      height: 300px;
     }
 /* 
     .input_username_class
@@ -192,3 +192,102 @@ hr {
       width: 910px;
       height: 150px;
     }
+
+    main {
+      width: 960px;
+      /* center on page using auto for left/right */
+      margin: 50px auto;
+      /* add padding so html inside has space */
+      padding: 20px;
+      background-color: #ffffff;
+      border: 4px solid #dddddd;
+    }
+    
+    /* target <h2> element inside of <main> */
+    main h2 {
+      color: #4aaaa5;
+      /* set padding to 0 top, 10 right and left, and 20 bottom */
+      padding: 0 10px 20px;
+      border-bottom: 3px solid #dddddd;
+      font-family: 'Georgia', Times, 'Times New Roman', serif;
+    }
+    
+
+    /* flex parent */
+.flex-container {
+  /* create flexbox */
+  display: flex;
+  /* instruct it to break onto next line if it runs out of space */
+  flex-wrap: wrap;
+  /* put all unused space between items */
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* flex child */
+.flex-item {
+  /* make each one 45%, putting 10% between each element on the page */
+  width: 34%;
+  /* rounded corners */
+  border-radius: 14px;
+  border: 4px solid #dddddd;
+  background-color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+
+  /* put space between each one vertically */
+  margin-bottom: 15px;
+
+  /* for files in local images folder, use url('../images/file-name.jpg') */
+  /* background-image: url('https://www.placecage.com/g/500/500'); */
+  /* background-image: url("../images/cellsite-development.jpg"); */
+
+  /* tell background to fit box no matter what */
+  background-size: cover;
+
+  /* crop it at the center */
+  background-position: center;
+
+  /* padding top and bottom 20px, 0 for left/right */
+  padding: 20px 0;
+
+  /* set minimum heigh value so there's room */
+  min-height: 200px;
+
+  /* rather than use position...use flexbox and create column instead of row */
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: start;
+}
+
+.site-dev{
+  background-image: url("../images/cellsite-development.jpg");
+}
+
+.itsm{
+  background-image: url("../images/ITSM.png");
+}
+
+.noc{
+  background-image: url("../images/NOC.jpg");
+}
+
+.cust-care{
+  background-image: url("../images/customer-care.png");
+}
+
+.cicd{
+  background-image: url("../images/CICD.jpg");
+}
+
+/* for text area inside of flex item */
+.flex-item span {
+  /* pushes element to bottom of flex item */
+  margin-top: auto;
+  width: 100%;
+  background-color: #4aaaa5;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+}
